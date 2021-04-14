@@ -34,13 +34,15 @@ class MaskedInputFormatter extends TextInputFormatter {
   final String? mask;
 
   final String _anyCharMask = '#';
-  final String _onlyDigitMask = '0';
+    //ChanngeS
+  final String _onlyDigitMask = '^';
+    //ChanngeE
   final RegExp? anyCharMatcher;
   String _lastValue = '';
 
-  /// [mask] is a string that must contain # (hash) and 0 (zero)
+  /// [mask] is a string that must contain # (hash) and ^ (zero)
   /// as maskable characters. # means any possible character,
-  /// 0 means only digits. So if you want to match e.g. a
+  /// ^ means only digits. So if you want to match e.g. a
   /// string like this GGG-FB-897-R5 you need
   /// a mask like this ###-##-000-#0
   /// a mask like ###-### will also match 123-034 but a mask like
